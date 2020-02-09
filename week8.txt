@@ -1,0 +1,36 @@
+git init /เปลี่ยนโฟลเดอร์ปัจจุบันให้เป๋น git project/
+
+git --version /เช็คเวอชั่น git/
+
+git status /เช็คความเปลี่ยนแปลงในโฟลเดอร์/
+
+git add "file name" /เพิ่มไฟล์ที่กำหนดเข้า staging area/
+git add . /เพิ่มไฟล์ทั้งหมดเข้า staging area/
+
+git config user.name "Your name" /ตั้งชื่อเพื่อระบุตัวผู้ commit/
+git config user.email "Your email" /ตั้งเมลเพื่อระบุตัวผู้ commit/
+
+**กรณีเป็นเครื่องส่วนตัวให้ใช้**
+git config --global user.name "Your name"
+git config --global user.email "Your email"
+
+git commit -m "name" /เก็บ checkpoint ของไฟล์/ ** -m(message) เป็นการกำหนดว่าเราทำอะไรไว้กับไฟล์ ณ checkpoint นี้
+
+**ทุกครั้งที่เพิ่มหรือแก้ไขไฟล์ให้ git status เสมอ**
+
+git log --all --decorate -oneline --graph /ดูcheckpoint ทั้งหมด/
+
+สร้าง reposity บน git hub
+
+git remote add <remote name> <git url> /เชื่อมไฟล์ในเครื่องกับ git hub/
+
+git push -u <remote name> master /อัพไฟล์ขึ้น git hub/ **
+
+นำ checkpoint เก่ากลับมาใช้ได้โดย
+git checkout <commit-id> /เอาไฟล์กลับมาจาก git ทั้งหมด/
+git checkout <commit-id> <file name> /เอาไฟล์ที่ระบุกลับมาจาก git /
+
+git pull <remote name> master /เอาไฟล์ทั้งหมดกลับมา/
+
+git clone <git url> /เอาไฟล์จาก git ที่ลบ local ไปแล้วกลับมา/
+
